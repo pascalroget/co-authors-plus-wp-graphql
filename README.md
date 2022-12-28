@@ -2,7 +2,9 @@
 Adds Co-Authors Plus Support to WPGraphQL
 
 ## Notes
-This will only show published authors. See https://www.wpgraphql.com/2020/12/11/allowing-wpgraphql-to-show-unpublished-authors-in-user-queries.
+This will only show published authors. 
+See https://www.wpgraphql.com/2020/12/11/allowing-wpgraphql-to-show-unpublished-authors-in-user-queries if you want to return unpublished authors. There are two snippets which you can add below the following line in this plugin to enable this functionality:
+`add_action( 'graphql_register_types', __NAMESPACE__ .'\register_coauthors_plus_connection' );`
 
 ## Usage
 Retrieving authors is done by requesting the `authors` field. Example:
